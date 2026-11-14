@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>MOVIES UZ — Foydalanish qo‘llanmasi</title>
+<style>
+:root{--bg:#0b1220;--panel:#131f33;--panel2:#1b2a43;--text:#f4f7fb;--muted:#b5c2d5;--accent:#7cdbb2;--blue:#7bb7ff;--line:#2b3b55}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1220,#101b2d 55%,#0b1220);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.wrap{max-width:1040px;margin:auto;padding:28px 18px 60px}
+header{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.08;margin:10px 0}
+.lead{color:var(--muted);max-width:720px;margin:12px 0 0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{border:1px solid var(--line);background:#142238;padding:6px 11px;border-radius:99px;color:#dce8f7;font-size:13px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 30px}
+nav a{color:#dce8f7;text-decoration:none;background:#142238;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px}
+section{margin:34px 0;scroll-margin-top:18px}
+.section-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.num{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#1c3b39;color:var(--accent);font-weight:900}
+h2{font-size:23px;margin:0}h3{font-size:17px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:linear-gradient(145deg,var(--panel),#101a2b);border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0}
+.card p{color:var(--muted);margin:7px 0}
+.mock{background:#0e1929;border:1px solid #344761;border-radius:16px;padding:12px;margin:12px 0 14px;max-width:440px}
+.phone-top{display:flex;align-items:center;gap:9px;padding:4px 2px 11px;border-bottom:1px solid #2a3b52;margin-bottom:12px}
+.avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#244a57;color:#aaf3dc;font-weight:800}
+.phone-title{font-weight:800;font-size:13px}.phone-sub{font-size:11px;color:#9fb0c7}
+.bubble{background:#1b2a40;border-radius:12px;padding:9px 11px;margin:8px 0;font-size:13px;color:#edf4ff;max-width:94%}
+.bubble.user{background:#234d49;margin-left:auto}
+.btns{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:10px}
+.btn{background:#223650;border:1px solid #38516f;color:#eaf3ff;text-align:center;padding:8px 6px;border-radius:9px;font-size:12px;font-weight:700}
+.btn.green{background:#1e493f;border-color:#347a66}
+.arrow{color:var(--accent);font-weight:900}
+.steps{padding-left:20px;margin:8px 0;color:#dce6f3}.steps li{padding:3px 0}
+.tip{border-left:3px solid var(--accent);background:#132a2b;padding:11px 13px;border-radius:0 10px 10px 0;color:#d8f5eb;font-size:14px;margin-top:12px}
+.warning{border-left:3px solid #e7b96c;background:#302819;padding:11px 13px;border-radius:0 10px 10px 0;color:#f8e7c7;font-size:14px;margin-top:12px}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}
+.flow span{background:#1c2b42;border:1px solid #344963;border-radius:9px;padding:8px 10px;font-size:13px}
+footer{border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:14px}
+a{color:#9bc9ff}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.wrap{padding:20px 14px 42px}.card{padding:15px}nav a{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <div class="eyebrow">Rasmli qo‘llanma</div>
+ <h1>🎬 MOVIES UZ<br>🤖 BOT BUILDER</h1>
+ <p class="lead">Kinolarni topish, kino kodi bilan qidirish va o‘zingizning Telegram botingizni yaratish bo‘yicha bosqichma-bosqich yo‘riqnoma.</p>
+ <div class="pills"><span class="pill">🍿 Kino va seriallar</span><span class="pill">🎵 Musiqa bot</span><span class="pill">🎥 Video bot</span><span class="pill">⚙️ Bot sozlamalari</span></div>
+</header>
+<nav>
+ <a href="#start">1. Boshlash</a><a href="#movies">2. Kino topish</a><a href="#code">3. Kino kodi</a><a href="#builder">4. Bot yaratish</a><a href="#settings">5. Sozlash</a><a href="#media">6. Media botlar</a>
+</nav>
+
+<section id="start">
+ <div class="section-head"><div class="num">01</div><h2>Botni ishga tushirish</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>Telegramda botni oching</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">M</div><div><div class="phone-title">MOVIES UZ</div><div class="phone-sub">bot</div></div></div>
+    <div class="bubble">Assalomu alaykum! MOVIES UZ botiga xush kelibsiz 🍿</div>
+    <div class="bubble user">/start</div>
+    <div class="btns"><div class="btn green">🎬 Kino bo‘limi</div><div class="btn">🤖 Bot Builder</div><div class="btn">📢 Kanal</div><div class="btn">ℹ️ Yordam</div></div>
+   </div>
+   <ol class="steps"><li>Telegramda MOVIES UZ botini oching.</li><li><b>Start / Boshlash</b> tugmasini bosing.</li><li>Kerakli bo‘limni menyudan tanlang.</li></ol>
+  </article>
+  <article class="card">
+   <h3>Asosiy menyu</h3>
+   <p>Bot menyusida kino tomosha qilish va bot yaratish yo‘nalishlari alohida joylashadi.</p>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">M</div><div><div class="phone-title">MOVIES UZ</div><div class="phone-sub">Asosiy menyu</div></div></div>
+    <div class="bubble">Qaysi xizmatdan foydalanmoqchisiz?</div>
+    <div class="btns"><div class="btn green">🍿 Kino / Serial</div><div class="btn">🤖 BOT BUILDER</div></div>
+   </div>
+   <div class="tip">Maslahat: tugma nomlari botning amaldagi menyusiga qarab biroz farq qilishi mumkin.</div>
+  </article>
+ </div>
+</section>
+
+<section id="movies">
+ <div class="section-head"><div class="num">02</div><h2>Kino yoki serial topish</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>Kino bo‘limini tanlang</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">M</div><div><div class="phone-title">Kino bo‘limi</div><div class="phone-sub">Movies</div></div></div>
+    <div class="bubble">Kino topish uchun qidiruvdan foydalaning.</div>
+    <div class="btns"><div class="btn green">🔎 Kino qidirish</div><div class="btn">🆕 Yangi kinolar</div><div class="btn">📺 Seriallar</div><div class="btn">🔥 Premyeralar</div></div>
+   </div>
+   <ol class="steps"><li><b>🎬 Kino / Serial</b> bo‘limini bosing.</li><li>Qidiruv yoki yangi kinolar bo‘limini tanlang.</li><li>Film nomini yozing yoki ro‘yxatdan tanlang.</li></ol>
+  </article>
+  <article class="card">
+   <h3>Natijadan filmni oching</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">M</div><div><div class="phone-title">Qidiruv natijasi</div><div class="phone-sub">Film kartasi — namuna</div></div></div>
+    <div class="bubble">🎞 Film nomi: Namunaviy film<br>🌐 Til: O‘zbekcha<br>🎭 Janr: Drama</div>
+    <div class="btns"><div class="btn green">▶️ Tomosha qilish</div><div class="btn">⬇️ Yuklab olish</div></div>
+   </div>
+   <ol class="steps"><li>Kerakli film kartasini oching.</li><li>Bot taklif qilgan tomosha qilish yoki yuklab olish tugmasini bosing.</li><li>Fayl yoki havola ko‘rsatmalariga amal qiling.</li></ol>
+  </article>
+ </div>
+</section>
+
+<section id="code">
+ <div class="section-head"><div class="num">03</div><h2>Kino kodi orqali qidirish</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>Kod yuborish oynasi</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">M</div><div><div class="phone-title">Kino qidirish</div><div class="phone-sub">Kod orqali</div></div></div>
+    <div class="bubble">Kino kodini yuboring. Masalan: 125</div>
+    <div class="bubble user">125</div>
+    <div class="bubble">✅ Kod topildi! Film ma’lumotlari quyida.</div>
+   </div>
+   <ol class="steps"><li><b>🔎 Kino qidirish</b> tugmasini bosing.</li><li>Filmning aniq kodini yuboring.</li><li>Bot topgan natijani tekshiring.</li></ol>
+  </article>
+  <article class="card">
+   <h3>Kodni qayerdan olish mumkin?</h3>
+   <p>Kino kodi odatda kanal postida yoki film tavsifida beriladi.</p>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">📢</div><div><div class="phone-title">Kino kanali</div><div class="phone-sub">Post namunasi</div></div></div>
+    <div class="bubble">🎬 Film: Namunaviy film<br>🔢 Kino kodi: 125<br>👇 Botga kodni yuboring</div>
+   </div>
+   <div class="tip">Kod ishlamasa, raqamni xatosiz kiritganingizni tekshiring yoki administratorga yozing.</div>
+  </article>
+ </div>
+</section>
+
+<section id="builder">
+ <div class="section-head"><div class="num">04</div><h2>O‘z Telegram botingizni yaratish</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>BOT BUILDER bo‘limiga kiring</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">🤖</div><div><div class="phone-title">BOT BUILDER</div><div class="phone-sub">Bot yaratish</div></div></div>
+    <div class="bubble">O‘zingizga kerakli bot turini tanlang.</div>
+    <div class="btns"><div class="btn green">🎬 Kino bot</div><div class="btn">🎵 Musiqa bot</div><div class="btn">🎥 Video bot</div><div class="btn">📥 Downloader</div></div>
+   </div>
+   <ol class="steps"><li>Asosiy menyudan <b>🤖 BOT BUILDER</b> ni tanlang.</li><li>Yaratmoqchi bo‘lgan bot turini belgilang.</li><li>Bot Builder ko‘rsatmalariga amal qiling.</li></ol>
+  </article>
+  <article class="card">
+   <h3>Yangi botni ulash</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">🤖</div><div><div class="phone-title">Yangi bot sozlamasi</div><div class="phone-sub">Namuna ekran</div></div></div>
+    <div class="bubble">1. Bot nomini kiriting<br>2. Bot username kiriting<br>3. BotFather tokenini ulang</div>
+    <div class="bubble user">Mening Kino Botim</div>
+    <div class="bubble">Bot ma’lumotlari saqlandi — namuna.</div>
+   </div>
+   <ol class="steps"><li>BotFather orqali Telegram bot yarating.</li><li>Bot nomi va username’ni belgilang.</li><li>Tokenni faqat ishonchli, rasmiy sozlash oynasiga kiriting.</li></ol>
+   <div class="warning">Bot tokeni — maxfiy kalit. Uni hech kimga, jumladan kanal yoki guruhga yubormang. Token oshkor bo‘lsa, BotFather orqali yangilang.</div>
+  </article>
+ </div>
+</section>
+
+<section id="settings">
+ <div class="section-head"><div class="num">05</div><h2>Bot menyusi va admin panelini sozlash</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>Menyu tugmalarini sozlash</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">⚙️</div><div><div class="phone-title">Bot sozlamalari</div><div class="phone-sub">Menyu namunasi</div></div></div>
+    <div class="btns"><div class="btn">✏️ Bot nomi</div><div class="btn">🖼 Rasm / avatar</div><div class="btn">🔘 Tugmalar</div><div class="btn">📝 Tavsif</div></div>
+   </div>
+   <ol class="steps"><li>Sozlamalar bo‘limini oching.</li><li>Bot nomi, tavsifi va menyu tugmalarini kiriting.</li><li>O‘zgarishlarni saqlang va botni tekshiring.</li></ol>
+  </article>
+  <article class="card">
+   <h3>Admin boshqaruvi</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">👑</div><div><div class="phone-title">Admin panel</div><div class="phone-sub">Namuna ekran</div></div></div>
+    <div class="btns"><div class="btn">➕ Kontent qo‘shish</div><div class="btn">👥 Foydalanuvchilar</div><div class="btn">📊 Statistika</div><div class="btn">⚙️ Sozlamalar</div></div>
+   </div>
+   <ol class="steps"><li>Admin panelga faqat ruxsatli akkaunt bilan kiring.</li><li>Kontent va foydalanuvchilarni boshqaring.</li><li>Har bir o‘zgarishdan keyin bot ishlashini sinab ko‘ring.</li></ol>
+  </article>
+ </div>
+</section>
+
+<section id="media">
+ <div class="section-head"><div class="num">06</div><h2>Musiqa va video botlar</h2></div>
+ <div class="grid">
+  <article class="card">
+   <h3>🎵 Musiqa bot</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">🎵</div><div><div class="phone-title">Musiqa bot</div><div class="phone-sub">Misol</div></div></div>
+    <div class="bubble">Qo‘shiq nomini kiriting yoki ruxsatli audio fayl yuboring.</div>
+    <div class="bubble user">Ijrochi — qo‘shiq nomi</div>
+    <div class="btns"><div class="btn green">▶️ Tinglash</div><div class="btn">⬇️ Yuklab olish</div></div>
+   </div>
+   <p>Faqat tarqatish va yuklab olishga ruxsat berilgan audio fayllar yoki manbalardan foydalaning.</p>
+  </article>
+  <article class="card">
+   <h3>🎥 Video / Downloader bot</h3>
+   <div class="mock">
+    <div class="phone-top"><div class="avatar">🎥</div><div><div class="phone-title">Video bot</div><div class="phone-sub">Misol</div></div></div>
+    <div class="bubble">Qo‘llab-quvvatlanadigan ruxsatli video havolasini yuboring.</div>
+    <div class="bubble user">https://example.com/video</div>
+    <div class="bubble">Havola tekshirilmoqda…</div>
+   </div>
+   <p>Faqat o‘zingizga tegishli yoki yuklab olishga ruxsat berilgan videolardan foydalaning. Platforma qoidalarini chetlab o‘tmang.</p>
+  </article>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><div class="num">?</div><h2>Yordam kerakmi?</h2></div>
+ <div class="card">
+  <p>Botdagi tugma nomlari yoki amallar ushbu namunaviy rasmlardan farq qilishi mumkin. Aniq, botingizga mos qo‘llanma tayyorlash uchun haqiqiy bot havolasi yoki menyu skrinshotlarini yuboring.</p>
+  <p><b>Administrator:</b> <a href="https://t.me/sobirov_jayxun">@sobirov_jayxun</a></p>
+  <div class="tip">Eslatma: bu sahifadagi telefon ekranlari tushuntirish uchun yaratilgan namunaviy maketlar, haqiqiy Telegram skrinshotlari emas.</div>
+ </div>
+</section>
+<footer>
+ <b>MOVIES UZ | BOT BUILDER</b><br>
+ Foydalanish qo‘llanmasi • O‘zbek tilida
+</footer>
+</div>
+</body>
+</html>
